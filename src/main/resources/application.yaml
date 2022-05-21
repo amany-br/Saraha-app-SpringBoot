@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: saraha-api
+  # Start - Database connection properties
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/saraha
+    username:postgres
+    password:root
+  # End database connection properties
+
+  # Start JPA / Hibernate properties
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+# End JPA / Hibernate properties
+
+server:
+  port: 8080
+  servlet:
+    context-path: /saraha-api
+# http://localhost:8080/saraha-api/controller_name/methode_name
